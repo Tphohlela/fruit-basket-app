@@ -41,11 +41,11 @@ describe("The fruit basket service", function() {
 
 		const fruits = await fruitBasket.listFruits();
 
-		const apples = fruits[0];
-		const bananas = fruits[1];
+		// const apples = fruits[0];
+		// const bananas = fruits[1];
 
-		await fruitBasket.addFruitToBasket(apples.id, basketId, 3);
-		await fruitBasket.addFruitToBasket(bananas.id, basketId, 7);
+		await fruitBasket.addFruitToBasket(fruits[0].id, basketId, 3);
+		await fruitBasket.addFruitToBasket(fruits[1].id, basketId, 7);
 
 		const basketItems = await fruitBasket.getBasketItems(basketId);
 
