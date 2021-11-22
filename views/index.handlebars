@@ -1,7 +1,25 @@
 
 <div>
-	<a href="/add_basket">Add basket</a>
+	<a href="/basket/add">Add basket</a>
 </div>
 
 <h2>Baskets</h2>
+
+  <table>
+        <tr>
+        <th>Basket name</th>
+        <th>Total cost</th>
+        </tr>
+
+        {{#each basket}}
+        <tr>
+            <td>{{description}}</td>
+            <td>R{{total}}</td>
+            {{!-- <td>{{qty}}</td>
+            <td>{{price}}</td> --}}
+            <td></td>
+            <td><a href="/basket/edit/{{id}}">edit</a></td>
+        </tr>
+        {{/each}}
+    </table>
 

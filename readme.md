@@ -42,5 +42,7 @@ These screencasts will be published soon...
 * [Accept or reject orders](#)
 * [Show orders ready for delivery](#)
 
+<!-- select  sum(qty * price) as total_cost from basket join basket_item on basket_item.basket_id = basket.id join fruit on fruit.id = basket_item.fruit_id where basket.id = $1 -->
+
 
 

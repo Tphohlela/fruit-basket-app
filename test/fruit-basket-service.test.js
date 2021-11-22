@@ -38,11 +38,8 @@ describe("The fruit basket service", function() {
 
 		const basketId = await fruitBasket.createBasket("My test basket for fruits");
 		assert.ok(basketId, "The basket id should be set");
-
+			
 		const fruits = await fruitBasket.listFruits();
-
-		// const apples = fruits[0];
-		// const bananas = fruits[1];
 
 		await fruitBasket.addFruitToBasket(fruits[0].id, basketId, 3);
 		await fruitBasket.addFruitToBasket(fruits[1].id, basketId, 7);
